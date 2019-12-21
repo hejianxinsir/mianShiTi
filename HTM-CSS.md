@@ -24,5 +24,57 @@
 - normalize: 让所有浏览器的标签跟标准规定的默认样式一致。它用标准的默认样式，让浏览器的默认样式基本统一。
 
 ### 必考: 如何居中？
+见此仓库的其他笔记。
+
+### BFC 是什么？
+- overflow: hidden 清楚浮动 (方方总是用 .clearfix 清楚浮动，overflow: hidden 不建议用)；
+- overflow: hidden 取消父子 margin 合并;(在父亲身上加 overflow: hidden); 注意：方方总是用 padding: 0.1px 取消父子合并。
+
+### 如何清除浮动？
+- overflow: hidden; 清除浮动，方方反对的办法
+- clearfix 清楚浮动。正规方法。
+```
+.clearfix::after {
+      display: block;
+      clear: both;
+      content: '';
+}
+.clearfix{
+      zoom: 1; /*兼容 IE*/
+}
+```
+
+### 七种数据类型
+number-bool-string-undefined-null-symbol-object
+
+### 必考 Promise 如何使用？
+- then
+```
+$.ajax(...).then(成功函数, 失败函数)
+```
+
+- 链式 then
+```
+$.ajax(...).then(成功函数, 失败函数).then(成功函数2, 失败函数2)
+```
+
+- 自己生成 Promise 对象
+```
+function xxx(){
+      return new Promise(function(resolve, reject){
+            setTimeout(()=>{
+                  resolve() 或者 reject()
+            },3000)
+      })
+}
+
+xxx.then();
+```
+
+### 必考: 手写 ajax
+```
+
+```
+
 
 
