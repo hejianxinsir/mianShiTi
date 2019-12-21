@@ -1,0 +1,189 @@
+
+1. table 自带的。
+```
+<table class="parent">
+    <tr>
+      <td class="child">
+      一字一串文字一串文字一串文字一串文字一串文字一串字一串文字一串文字一串文字
+      </td>
+    </tr>
+</table>
+
+.parent{
+  border: 1px solid red;
+  height: 600px;
+}
+
+.child{
+  border: 1px solid green;
+}
+```
+
+2. 100% 高度的 before after 加上 inline-block
+```
+<div class="parent">
+    <span class=before></span>
+    
+    <div class="child">
+      一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字
+    </div>
+    
+    <span class=after></span>
+</div>
+
+.parent{
+  border: 3px solid red;
+  height: 600px;
+  text-align: center;
+}
+
+.child{
+  border: 3px solid black;
+  display: inline-block;
+  width: 300px;
+  vertical-align: middle;
+}
+
+.parent .before{
+  outline: 3px solid red;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.parent .after{
+  outline: 3px solid red;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+```
+
+3. 把 div 装成 table
+```
+<div class="table">
+      <div class="td">
+        <div class="child">
+          一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字
+        </div>
+    </div>
+</div>
+
+div.table{
+  display: table;
+  border: 1px solid red;
+  height: 600px;
+}
+
+div.tr{
+  display: table-row;
+  border: 1px solid green;
+}
+
+div.td{
+  display: table-cell;
+  border: 1px solid blue;
+  vertical-align: middle;
+}
+.child{
+  border: 10px solid black;
+}
+```
+
+4. margin-top: -50%;
+```
+<div class="parent">
+    <div class="child">
+      一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字
+    </div>
+  </div>
+  
+ .parent{
+  height: 600px;
+  border: 1px solid red;
+  position: relative;
+}
+.child{
+  border: 1px solid green;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -50px;
+}
+```
+
+5. transform: translate(-50%, -50%)
+```
+<div class="parent">
+    <div class="child">
+      一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字
+    </div>
+  </div>
+
+.parent{
+  height: 600px;
+  border: 1px solid red;
+  position: relative;
+}
+.child{
+  border: 1px solid green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+```
+
+6. absolute margin auto
+```
+<div class="parent">
+    <div class="child">
+      一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字
+    </div>
+  </div>
+  
+  .parent{
+  height: 600px;
+  border: 1px solid red;
+  position: relative;
+}
+.child{
+  border: 1px solid green;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+```
+
+7. flex
+```
+<div class="child">
+      一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字一串文字
+    </div>
+    
+.parent{
+  height: 600px;
+  border: 3px solid red;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child{
+  border: 3px solid green;
+  width: 300px;
+}
+```
+
+
+
+
+
+
