@@ -21,3 +21,24 @@ Human.prototype.useTools = function(){}
 var frank = new Human()
 
 // 写完以上代码就行
+
+// 另一种方法：用 extends 关键字实现继承
+
+class Animal{
+  constructor(){
+    this.body = '肉体'
+  }，
+  move(){}
+}
+
+class Human extends Animal{
+  constructor(name){
+    super()
+    this.name = name
+  },
+  useTools(){}
+}
+
+var janson = new Human()
+
+
